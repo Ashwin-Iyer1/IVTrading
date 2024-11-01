@@ -8,7 +8,7 @@ import numpy as np
 from dotenv import load_dotenv
 import os
 import datetime
-from Script import getOptionsPrice
+from stockControl import getOptionsPrice
 load_dotenv()
 
 Alpaca_API_KEY = os.getenv("Alpaca_API_KEY")
