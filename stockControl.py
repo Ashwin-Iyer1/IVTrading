@@ -53,6 +53,7 @@ def getStockPrice(symbol):
     response = requests.get(url, headers=headers)
     return response.json()['trade']['p']
 
+
 def getActiveStocks():
     url = 'https://data.alpaca.markets/v1beta1/screener/stocks/most-actives?by=volume&top=25'
     response = requests.get(url, headers=headers)
@@ -120,9 +121,3 @@ def getOptionBreakeven(strike_price, close_price, stock_price):
         return -1
     jumpAmt = (float(strike_price) + float(close_price) - float(stock_price)) / float(stock_price) #pct change for stock price to reach breakeven (little wrong)
     return jumpAmt
-
-
-
-
-
-
